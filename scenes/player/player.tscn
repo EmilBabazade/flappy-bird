@@ -136,6 +136,7 @@ stream = ExtResource("8_qek5x")
 
 [node name="JumpGapSound" type="AudioStreamPlayer2D" parent="." unique_id=1306967409]
 stream = ExtResource("9_5gtgg")
+volume_db = -20.0
 
 [node name="GameOverSound" type="AudioStreamPlayer2D" parent="." unique_id=1762676291]
 stream = ExtResource("10_h17s1")
