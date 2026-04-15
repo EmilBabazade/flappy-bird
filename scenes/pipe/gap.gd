@@ -6,3 +6,8 @@ class_name Gap
 func get_height() -> float:
 	var shape: RectangleShape2D = cs.shape
 	return shape.size.y
+
+
+func _on_body_entered(body: Node2D) -> void:
+	var player := body as Player
+	player.play_jump_gap_sound()

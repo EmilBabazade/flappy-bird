@@ -7,6 +7,7 @@
 size = Vector2(182, 198)
 
 [node name="Gap" type="Area2D" unique_id=257083569]
+collision_layer = 2
 script = ExtResource("1_5hosa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1919724684]
@@ -15,3 +16,5 @@ debug_color = Color(0.91048664, 0.24865425, 0.42389038, 0.41960785)
 
 [node name="Mover" parent="." unique_id=1714217421 node_paths=PackedStringArray("to_move") instance=ExtResource("2_ek5o8")]
 to_move = NodePath("..")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

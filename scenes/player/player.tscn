@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://b03de8dwbo4fj" path="res://graphics/Gufiao_CuteFlappy_Free/flappy03.png" id="5_5gtgg"]
 [ext_resource type="Texture2D" uid="uid://cvm4mf87rhxdk" path="res://graphics/Gufiao_CuteFlappy_Free/flappy04.png" id="6_h17s1"]
 [ext_resource type="Texture2D" uid="uid://b2vsi27hgiwie" path="res://graphics/Gufiao_CuteFlappy_Free/flappy05.png" id="7_je7p5"]
+[ext_resource type="AudioStream" uid="uid://bu4ukqkuh747w" path="res://sound/350906__cabled_mess__jump_c_04.wav" id="8_qek5x"]
+[ext_resource type="AudioStream" uid="uid://clmeke17ukpgm" path="res://sound/386586__jalastram__sfx_pickup_59.wav" id="9_5gtgg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fm80t"]
 animations = [{
@@ -111,3 +113,9 @@ shape = SubResource("CircleShape2D_dovo2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1799298089]
 libraries/ = SubResource("AnimationLibrary_5gtgg")
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=2006620308]
+stream = ExtResource("8_qek5x")
+
+[node name="JumpGapSound" type="AudioStreamPlayer2D" parent="." unique_id=1306967409]
+stream = ExtResource("9_5gtgg")
