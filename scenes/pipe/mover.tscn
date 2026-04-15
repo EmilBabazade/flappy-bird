@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cuvh120ts2kl2"]
+
+[ext_resource type="Script" uid="uid://bae4j58rwv6ib" path="res://scenes/pipe/mover.gd" id="1_dprbw"]
+
+[node name="Mover" type="Node2D" unique_id=1714217421]
+script = ExtResource("1_dprbw")

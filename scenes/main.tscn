@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bc41xowkmerv5"]
+
+[ext_resource type="PackedScene" uid="uid://p087u805ajvb" path="res://scenes/player/player.tscn" id="1_o5qli"]
+[ext_resource type="Texture2D" uid="uid://cjiymdtgglpcv" path="res://graphics/sky.png" id="1_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://ctdxscdekmvcm" path="res://scenes/pipe/pipe_spawner.tscn" id="2_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://dbhxx8ljq4ius" path="res://graphics/Gufiao_CuteFlappy_Free/mounts.png" id="4_tbgi4"]
+
+[node name="Main" type="Node2D" unique_id=1552928623]
+
+[node name="Background" type="Node2D" parent="." unique_id=254839842]
+
+[node name="Sky" type="Parallax2D" parent="Background" unique_id=1737589936]
+scroll_scale = Vector2(0.3, 1)
+repeat_size = Vector2(576, 0)
+autoscroll = Vector2(-25, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Sky" unique_id=1083659929]
+position = Vector2(572, 177)
+scale = Vector2(2, 2)
+texture = ExtResource("1_o6xl0")
+
+[node name="Mountains" type="Parallax2D" parent="Background" unique_id=1085950933]
+scroll_scale = Vector2(0.5, 1)
+repeat_size = Vector2(210, 0)
+autoscroll = Vector2(-50, 0)
+repeat_times = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Mountains" unique_id=507952107]
+position = Vector2(433, 447)
+texture = ExtResource("4_tbgi4")
+
+[node name="Player" parent="." unique_id=911074129 instance=ExtResource("1_o5qli")]
+position = Vector2(143, 336)
+
+[node name="PipeSpawner" parent="." unique_id=1786491503 node_paths=PackedStringArray("spawn_top", "spawn_bottom") instance=ExtResource("2_0wfyh")]
+position = Vector2(1215, 336)
+spawn_top = NodePath("top")
+spawn_bottom = NodePath("bottom")
+
+[node name="top" type="Marker2D" parent="PipeSpawner" unique_id=55280927]
+position = Vector2(0, -336)
+
+[node name="bottom" type="Marker2D" parent="PipeSpawner" unique_id=822271123]
+position = Vector2(0, 312)

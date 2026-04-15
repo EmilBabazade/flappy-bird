@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://ctfr0w4t446un"]
+
+[ext_resource type="Texture2D" uid="uid://cri5na860w5ev" path="res://graphics/Gufiao_CuteFlappy_Free/pipe.png" id="1_3x1uc"]
+[ext_resource type="Script" uid="uid://b2rqjpajxk233" path="res://scenes/pipe/pipe.gd" id="1_rvrno"]
+[ext_resource type="PackedScene" uid="uid://cuvh120ts2kl2" path="res://scenes/pipe/mover.tscn" id="3_w3bcf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3x1uc"]
+size = Vector2(79, 595)
+
+[node name="Pipe" type="Area2D" unique_id=1085542306]
+collision_layer = 2
+script = ExtResource("1_rvrno")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=583414076]
+position = Vector2(0, 302)
+texture = ExtResource("1_3x1uc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1095235772]
+position = Vector2(-0.5, 304.5)
+shape = SubResource("RectangleShape2D_3x1uc")
+
+[node name="Mover" parent="." unique_id=1714217421 node_paths=PackedStringArray("to_move") instance=ExtResource("3_w3bcf")]
+to_move = NodePath("..")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

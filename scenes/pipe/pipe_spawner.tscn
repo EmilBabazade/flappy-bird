@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ctdxscdekmvcm"]
+
+[ext_resource type="Script" uid="uid://c4vfp4x26dwkf" path="res://scenes/pipe/pipe_spawner.gd" id="1_lnn1i"]
+[ext_resource type="PackedScene" uid="uid://ctfr0w4t446un" path="res://scenes/pipe/pipe.tscn" id="2_rel0m"]
+[ext_resource type="PackedScene" uid="uid://dnoap0wowa7k1" path="res://scenes/pipe/gap.tscn" id="3_s3iym"]
+
+[node name="PipeSpawner" type="Marker2D" unique_id=1786491503]
+script = ExtResource("1_lnn1i")
+pipe_scene = ExtResource("2_rel0m")
+gap_scene = ExtResource("3_s3iym")
+
+[node name="Timer" type="Timer" parent="." unique_id=1720475487]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
