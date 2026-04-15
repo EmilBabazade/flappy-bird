@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cuvh120ts2kl2" path="res://scenes/pipe/mover.tscn" id="2_ek5o8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6okgy"]
-size = Vector2(182, 198)
+size = Vector2(204, 236)
 
 [node name="Gap" type="Area2D" unique_id=257083569]
 collision_layer = 2

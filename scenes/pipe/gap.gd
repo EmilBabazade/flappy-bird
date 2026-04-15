@@ -10,4 +10,5 @@ func get_height() -> float:
 
 func _on_body_entered(body: Node2D) -> void:
 	var player := body as Player
+	ScoreManager.increase()
 	player.play_jump_gap_sound()

@@ -6,4 +6,4 @@ func upside_down() -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	print("player entered")
+	HealthManager.die()

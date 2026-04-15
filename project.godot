@@ -15,6 +15,12 @@ run/main_scene="uid://bc41xowkmerv5"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+ScoreManager="*uid://cwwo3jlbajqpp"
+SpeedManager="*uid://b3haucjsabadq"
+HealthManager="*uid://cy03lc2blttcf"
+
 [debug]
 
 gdscript/warnings/untyped_declaration=2

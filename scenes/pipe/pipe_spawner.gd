@@ -7,6 +7,9 @@ class_name PipeSpawner
 @export var spawn_top: Marker2D
 @export var spawn_bottom: Marker2D
 
+func _ready() -> void:
+	ScoreManager.score_changed.connect(on_score_changed)
+
 func _on_timer_timeout() -> void:
 #	spawn gap
 	var gap := gap_scene.instantiate() as Gap
@@ -24,3 +27,8 @@ func _on_timer_timeout() -> void:
 	var pipe2 := pipe_scene.instantiate() as Pipe
 	add_child(pipe2)
 	pipe2.global_position.y = gap.global_position.y + h
+
+func on_score_changed(s: int) -> void:
+	var wait_time := spawn_timer.wait_time
+	if s % 10 == 0 and wait_time > 1.0:
+		spawn_timer.wait_time -= wait_time * 0.1

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://df076yptlxd3e"]
+
+[ext_resource type="Script" uid="uid://db62a5mcre1h5" path="res://scenes/ui/score.gd" id="1_6p650"]
+[ext_resource type="FontFile" uid="uid://cjkaolfdvgin8" path="res://addons/Font Pack/RodchenkoBTT.ttf" id="1_pyjjy"]
+
+[node name="Score" type="CanvasLayer" unique_id=2137343967]
+script = ExtResource("1_6p650")
+
+[node name="Label" type="Label" parent="." unique_id=1193181096]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_pyjjy")
+theme_override_font_sizes/font_size = 27
+text = "100"
