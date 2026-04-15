@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://b1nvobq2d08dy"]
+
+[ext_resource type="FontFile" uid="uid://cjkaolfdvgin8" path="res://addons/Font Pack/RodchenkoBTT.ttf" id="1_7w7rl"]
+[ext_resource type="Script" uid="uid://dcxyebdv2axja" path="res://scenes/ui/menu.gd" id="1_wedc3"]
+
+[node name="Menu" type="CanvasLayer" unique_id=1726375752]
+script = ExtResource("1_wedc3")
+
+[node name="Score" type="MarginContainer" parent="." unique_id=2096196406]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -148.5
+offset_right = 148.5
+offset_bottom = 95.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 20
+
+[node name="Label2" type="Label" parent="Score" unique_id=891202797]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_7w7rl")
+theme_override_font_sizes/font_size = 64
+text = "SCORE: 100"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1422576311]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -37.5
+offset_right = 154.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1306691934]
+layout_mode = 2
+theme_override_constants/margin_bottom = 50
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer" unique_id=1880141908]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_7w7rl")
+theme_override_font_sizes/font_size = 64
+text = "Floppy Bird"
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1026603374]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_7w7rl")
+theme_override_font_sizes/font_size = 32
+text = "NEW GAME"

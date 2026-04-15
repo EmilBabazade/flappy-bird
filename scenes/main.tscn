@@ -2,12 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://p087u805ajvb" path="res://scenes/player/player.tscn" id="1_o5qli"]
 [ext_resource type="Texture2D" uid="uid://cjiymdtgglpcv" path="res://graphics/sky.png" id="1_o6xl0"]
+[ext_resource type="Script" uid="uid://bo03kv01cy0sv" path="res://scenes/main.gd" id="1_tipki"]
 [ext_resource type="PackedScene" uid="uid://ctdxscdekmvcm" path="res://scenes/pipe/pipe_spawner.tscn" id="2_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://dbhxx8ljq4ius" path="res://graphics/Gufiao_CuteFlappy_Free/mounts.png" id="4_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://df076yptlxd3e" path="res://scenes/ui/score.tscn" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://b1nvobq2d08dy" path="res://scenes/ui/menu.tscn" id="6_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://ctfr0w4t446un" path="res://scenes/pipe/pipe.tscn" id="6_tefeu"]
 
 [node name="Main" type="Node2D" unique_id=1552928623]
+script = ExtResource("1_tipki")
 
 [node name="Background" type="Node2D" parent="." unique_id=254839842]
 
@@ -49,6 +52,9 @@ position = Vector2(0, 312)
 
 [node name="Score" parent="UI" unique_id=2137343967 instance=ExtResource("5_tbgi4")]
 
+[node name="Menu" parent="UI" unique_id=1726375752 instance=ExtResource("6_o6xl0")]
+visible = false
+
 [node name="Pipe2" parent="." unique_id=725292760 instance=ExtResource("6_tefeu")]
 position = Vector2(2111, 699)
 rotation = 1.5707964
@@ -58,3 +64,5 @@ scale = Vector2(1, 4)
 position = Vector2(2105, -56)
 rotation = 1.5707964
 scale = Vector2(1, 4)
+
+[connection signal="new_game" from="UI/Menu" to="." method="_on_menu_new_game"]
